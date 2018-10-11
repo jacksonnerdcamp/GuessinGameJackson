@@ -11,7 +11,23 @@ public class Main
 		int randomInt = (int)(randomDouble * 10);
 		Scanner input = new Scanner(System.in);
 		System.out.println("guess");
-		randomInt = input.nextInt();
+		int guess = input.nextInt();
+		while(guess != randomInt)
+		{
+			System.out.println("Guess again");
+			guess = input.nextInt();
+		}
 		System.out.println("you got it!");
+
+		//AI guesser
+		int n = 50;
+		Scanner input = new Scanner(System.in);
+		System.out.println("Is this your number:" + n);
+		Boolean answer = input.nextBoolean();
+		if(answer)
+		{
+			System.out.println("I did it!");
+		}
+		
     }
 }
