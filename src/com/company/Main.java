@@ -20,13 +20,33 @@ public class Main
 		System.out.println("you got it!");
 
 		//AI guesser
-		int n = 50;
-		Scanner input = new Scanner(System.in);
-		System.out.println("Is this your number:" + n);
-		Boolean answer = input.nextBoolean();
-		if(answer)
+		int min = 0;
+		int max = 100;
+		int guesser = (max + min)/2;
+		input = new Scanner(System.in);
+		System.out.println("Is this your number:" + guesser);
+		String answer = input.nextLine();
+		if(answer.equals("yes"))
 		{
 			System.out.println("I did it!");
+		}
+		else
+		{
+			input = new Scanner(System.in);
+			System.out.println("Higher or lower?");
+			String answer = input.nextLine();
+			if(answer.equals("higher"))
+			{
+				min += max/2;
+				guesser = (max + min)/2;
+				System.out.println("Is this your number:" + guesser);
+			}
+			else
+			{
+				max -= max/2;
+				guesser = (max + min)/2;
+				System.out.println("Is this your number:" + guesser);
+			}
 		}
 		
     }
