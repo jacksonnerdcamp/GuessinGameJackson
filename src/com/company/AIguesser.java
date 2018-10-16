@@ -4,7 +4,5 @@ import java.util.Scanner;
 
 public class AIguesser
 {
-    /*int n = 50;
-    Scanner input = new Scanner(System.in);
-    System.out.("Is this your number:" + n);*/
+    //In case you are wondering where all the code is, both tasks were completed in the Main class.
 }
